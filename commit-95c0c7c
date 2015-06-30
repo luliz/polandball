@@ -1,0 +1,22 @@
+commit 95c0c7c04ce0279cbe7685b57cbe5ed849bdb44f
+Author: viimb <vitus_mb@hotmail.com>
+Date:   Mon Jun 29 21:23:51 2015 -0300
+
+    Teste victor
+
+diff --git a/Assets/Imagens/pollandball.png b/Assets/Imagens/pollandball.png
+new file mode 100644
+index 0000000..64a614e
+Binary files /dev/null and b/Assets/Imagens/pollandball.png differ
+diff --git a/desktop.ini b/desktop.ini
+new file mode 100644
+index 0000000..c23c775
+--- /dev/null
++++ b/desktop.ini
+@@ -0,0 +1,6 @@
++[.ShellClassInfo]
++IconResource=C:\Users\Victor\Desktop\icons\Victor\icones\1435518609_github.ico,0
++[ViewState]
++Mode=
++Vid=
++FolderType=Generic
