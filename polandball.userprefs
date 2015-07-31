@@ -1,16 +1,9 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TorchAnim.cs">
-    <Files>
-      <File FileName="Assets\TorchAnim.cs" Line="6" Column="27" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\moveDisBitch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\checkGround.cs">
     <Files>
-      <File FileName="Assets\moveDisBitch.cs" Line="25" Column="8" />
-      <File FileName="Assets\checkGround.cs" Line="13" Column="2" />
->>>>>>> origin/Luiz_Paulo_testing
+      <File FileName="Assets\checkGround.cs" Line="20" Column="4" />
+      <File FileName="Assets\moveDisBitch.cs" Line="31" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
