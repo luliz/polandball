@@ -7,7 +7,6 @@ public class moveDisBitch : MonoBehaviour {
 	public int velocidade = 1;
 	private bool right = true;
 	private bool ground = true;
-	
 	// Use this for initialization
 	void Start () {
 		
