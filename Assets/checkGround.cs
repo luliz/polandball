@@ -15,12 +15,12 @@ public class checkGround : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D (Collider2D col){
-		if(col.gameObject.name == "ground"){
+		if(col.gameObject.tag == "Jumpable"){
 			ground = true;
 		}
 	}
 	void OnTriggerExit2D (Collider2D col){
-		if (col.gameObject.name == "ground") {
+		if (col.gameObject.tag == "Jumpable") {
 			ground = false;
 		}
 	}
