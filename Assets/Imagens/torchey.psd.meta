@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: adad25baa7248284daa98ea8394b1703
-timeCreated: 1438291946
+timeCreated: 1439060535
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,8 +68,8 @@ TextureImporter:
     - name: torchey_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 35
+        x: 32
+        y: 36
         width: 18
         height: 24
       alignment: 0
