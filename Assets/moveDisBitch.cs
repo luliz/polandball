@@ -5,8 +5,10 @@ public class moveDisBitch : MonoBehaviour {
 	
 	
 	public float velocidade = 1f;
+	private float temporizer = 0f;
 	private bool right = true;
 	private bool ground = true;
+	private bool ceiling;
 
 	public Rigidbody2D myRigidBody2D;
 
@@ -28,6 +30,7 @@ public class moveDisBitch : MonoBehaviour {
 	void Update () {
 		animator.SetFloat ("Yvelocity", myRigidBody2D.velocity.y);
 		ground = transform.GetComponentInChildren<checkGround>().ground;
+		ceiling = transform.GetComponentInChildren<checkCeiling>().ceiling;
 
 		if (onRope) {
 			animator.SetBool ("ground", true);
@@ -71,7 +74,17 @@ public class moveDisBitch : MonoBehaviour {
 		if (Input.GetKeyDown (Controls.jump) && ground) {
 			myRigidBody2D.AddForce(new Vector2(0f, 2.5f), ForceMode2D.Impulse);
 		}
-
+		if (Input.GetKey("e") && ceiling == true) {
+			temporizer += Time.deltaTime;
+			if(temporizer <= 1) {
+				animator.SetBool ("ground", true);
+				myRigidBody2D.gravityScale = 0;
+				myRigidBody2D.velocity = Vector2.zero;
+			}
+		}
+		if(ground == true) {
+			temporizer = 0;
+		}
 	}
 	private void Flip(){
 		// Troca pra onde o player ta olhando.

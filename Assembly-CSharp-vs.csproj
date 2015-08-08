@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Controls.cs" />
      <Compile Include="Assets\TorchAnim.cs" />
+     <Compile Include="Assets\checkCeiling.cs" />
      <Compile Include="Assets\checkGround.cs" />
      <Compile Include="Assets\checkRope.cs" />
      <Compile Include="Assets\moveDisBitch.cs" />

@@ -18,7 +18,6 @@ public class checkGround : MonoBehaviour {
 		if(col.gameObject.tag == "Jumpable"){
 			ground = true;
 			playerAnimator.SetBool("ground", true);
-			Debug.Log("ta no chao");
 		}
 	}
 	void OnTriggerExit2D (Collider2D col){
