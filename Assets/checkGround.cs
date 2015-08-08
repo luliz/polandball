@@ -7,17 +7,18 @@ public class checkGround : MonoBehaviour {
 	private Animator playerAnimator;
 	// Use this for initialization
 	void Start () {
-		playerAnimator = GetComponent<Animator>();
+		playerAnimator = GetComponentInParent<Animator> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		
 	}
-	void OnTriggerEnter2D (Collider2D col){
+	void OnTriggerStay2D (Collider2D col){
 		if(col.gameObject.tag == "Jumpable"){
 			ground = true;
 			playerAnimator.SetBool("ground", true);
+			Debug.Log("ta no chao");
 		}
 	}
 	void OnTriggerExit2D (Collider2D col){

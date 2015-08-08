@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\moveDisBitch.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\checkGround.cs">
     <Files>
-      <File FileName="Assets\moveDisBitch.cs" Line="28" Column="18" />
-      <File FileName="Assets\checkGround.cs" Line="26" Column="42" />
-      <File FileName="Assets\checkRope.cs" Line="12" Column="30" />
+      <File FileName="Assets\moveDisBitch.cs" Line="30" Column="39" />
+      <File FileName="Assets\checkGround.cs" Line="10" Column="54" />
+      <File FileName="Assets\checkRope.cs" Line="1" Column="1" />
       <File FileName="Assets\Controls.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
