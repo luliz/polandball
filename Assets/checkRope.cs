@@ -8,8 +8,8 @@ public class checkRope : MonoBehaviour {
 	void Start () {
 		thePlayer = FindObjectOfType<moveDisBitch> ();
 	}
-	void OnTriggerEnter2D (Collider2D col){
-		if (col.name == "Poland") {
+	void OnTriggerStay2D (Collider2D col){
+		if (col.name == "Poland" && Input.GetKey (Controls.up)) {
 			thePlayer.onRope = true;
 		}
 	}
