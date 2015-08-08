@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{DCDB13DC-1814-A8A6-9CFB-928ED6DBB66B}") = "Polandball", "Assembly-CSharp.csproj", "{4A905ACF-DF2D-24B2-6D86-71211E281384}"
+Project("{58A67B4D-2947-2FF8-1A9C-FDAA19100A35}") = "polandball", "Assembly-CSharp.csproj", "{EE3D9571-59BF-EC00-E831-53505B158D8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4A905ACF-DF2D-24B2-6D86-71211E281384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A905ACF-DF2D-24B2-6D86-71211E281384}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A905ACF-DF2D-24B2-6D86-71211E281384}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A905ACF-DF2D-24B2-6D86-71211E281384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE3D9571-59BF-EC00-E831-53505B158D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE3D9571-59BF-EC00-E831-53505B158D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE3D9571-59BF-EC00-E831-53505B158D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE3D9571-59BF-EC00-E831-53505B158D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																						GlobalSection(MonoDevelopProperties) = preSolution
+																																							GlobalSection(MonoDevelopProperties) = preSolution
 =======
 												GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/Luiz_Paulo_testing
