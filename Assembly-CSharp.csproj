@@ -52,6 +52,7 @@
      <Compile Include="Assets\checkGround.cs" />
      <Compile Include="Assets\checkRope.cs" />
      <Compile Include="Assets\moveDisBitch.cs" />
+     <Compile Include="Assets\slideController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
