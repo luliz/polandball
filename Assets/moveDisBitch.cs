@@ -74,7 +74,7 @@ public class moveDisBitch : MonoBehaviour {
 		if (Input.GetKeyDown (Controls.jump) && ground) {
 			myRigidBody2D.AddForce(new Vector2(0f, 2.5f), ForceMode2D.Impulse);
 		}
-		if (Input.GetKey("e") && ceiling == true) {
+		if (Input.GetKey(Controls.stickToCeiling) && ceiling == true) {
 			temporizer += Time.deltaTime;
 			if(temporizer <= 1) {
 				animator.SetBool ("ground", true);
