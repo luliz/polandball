@@ -17,5 +17,9 @@ public class slideController : MonoBehaviour {
 			else
 				animator.SetTrigger ("advance");
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.LoadLevel (1);
+		}
 	}
 }
