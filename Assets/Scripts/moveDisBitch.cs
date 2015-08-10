@@ -69,8 +69,10 @@ public class moveDisBitch : MonoBehaviour {
 		} else {
 			animator.SetBool ("walking", false);
 		}
-		if (Input.GetKeyDown (Controls.jump) && ground) {
+		if (Input.GetKeyDown (Controls.jump) && (ground || onRope)) {
 			myRigidBody2D.AddForce(new Vector2(0f, 2.5f), ForceMode2D.Impulse);
+			if (onRope)
+				onRope = false;
 		}
 		if (Input.GetKey(Controls.stickToCeiling) && ceiling == true) {
 			temporizer += Time.deltaTime;

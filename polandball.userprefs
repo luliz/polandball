@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraFollowing.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\moveDisBitch.cs">
     <Files>
       <File FileName="Assets\Scripts\checkCeiling.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\checkGround.cs" Line="13" Column="25" />
+      <File FileName="Assets\Scripts\checkGround.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraFollowing.cs" Line="22" Column="2" />
       <File FileName="Assets\Scripts\slideController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\moveDisBitch.cs" Line="72" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
