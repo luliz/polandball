@@ -12,6 +12,7 @@ public class moveDisBitch : MonoBehaviour {
 
 	public Rigidbody2D myRigidBody2D;
 
+	private bool allowed = true;
 	public bool onRope;
 	public float climbSpeed;
 	private float climbVelocity;
@@ -49,7 +50,7 @@ public class moveDisBitch : MonoBehaviour {
 			myRigidBody2D.gravityScale = gravityStore;
 		}
 		
-		if (Input.GetKey (Controls.walkRight)) {
+		if (Input.GetKey (Controls.walkRight) && allowed) {
 			if (!onRope && ground)
 				animator.SetBool ("walking", true);
 			else
@@ -58,7 +59,7 @@ public class moveDisBitch : MonoBehaviour {
 			if (right) {
 				Flip ();
 			}
-		} else if (Input.GetKey (Controls.walkLeft)) {
+		} else if (Input.GetKey (Controls.walkLeft) && allowed) {
 			if (!onRope && ground)
 				animator.SetBool ("walking", true);
 			else animator.SetBool ("walking", false);
@@ -79,10 +80,12 @@ public class moveDisBitch : MonoBehaviour {
 			if(temporizer <= 1) {
 				animator.SetBool ("ground", true);
 				myRigidBody2D.gravityScale = 0;
+				allowed = false;
 				myRigidBody2D.velocity = Vector2.zero;
 			}
 		}
 		if(ground == true) {
+			allowed = true;
 			temporizer = 0;
 		}
 	}
