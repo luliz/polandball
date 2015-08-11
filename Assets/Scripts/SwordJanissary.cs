@@ -134,6 +134,10 @@ public class SwordJanissary : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+		theScale = GameObject.Find ("Expressions").GetComponent<Transform> ().localScale;
+		theScale.x *= -1;
+		GameObject.Find ("Expressions").GetComponent<Transform> ().localScale = theScale;
+
 	}
 	
 }
