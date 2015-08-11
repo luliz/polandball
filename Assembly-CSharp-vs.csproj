@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFollowing.cs" />
      <Compile Include="Assets\Scripts\Controls.cs" />
+     <Compile Include="Assets\Scripts\SwordJanissary.cs" />
      <Compile Include="Assets\Scripts\TorchAnim.cs" />
      <Compile Include="Assets\Scripts\checkCeiling.cs" />
      <Compile Include="Assets\Scripts\checkGround.cs" />

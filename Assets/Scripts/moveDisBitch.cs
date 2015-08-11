@@ -55,7 +55,7 @@ public class moveDisBitch : MonoBehaviour {
 			else
 				animator.SetBool ("walking", false);
 			transform.Translate(new Vector3(velocidade*Time.deltaTime,0,0));
-			if (!right) {
+			if (right) {
 				Flip ();
 			}
 		} else if (Input.GetKey (Controls.walkLeft)) {
@@ -63,7 +63,7 @@ public class moveDisBitch : MonoBehaviour {
 				animator.SetBool ("walking", true);
 			else animator.SetBool ("walking", false);
 			transform.Translate(new Vector3(-velocidade*Time.deltaTime,0,0));
-			if (right) {
+			if (!right) {
 				Flip ();
 			}
 		} else {
