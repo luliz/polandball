@@ -7,8 +7,13 @@ public class SwordJanissary : MonoBehaviour {
 	public Transform target;
 	private Animator animator;
 
+	SpriteRenderer expression;
+	public Sprite exclamation;
+	public Sprite Interrogation;
+	int expressionCounter = 50;
 	bool attacking;
 	bool coolingOff;
+	bool isSeeing = false;
 	public float turnSpeed;
 	private RaycastHit2D saw;
 	public LayerMask enemies;
@@ -21,6 +26,7 @@ public class SwordJanissary : MonoBehaviour {
 	void Awake () {
 		sword = transform.Find ("Sword");
 		animator = GetComponent<Animator> ();
+		expression = GameObject.Find("Expressions").GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +49,13 @@ public class SwordJanissary : MonoBehaviour {
 			Follow ();
 		}
 		else {
+			if (isSeeing && !coolingOff) {
 
+
+				expression.sprite = Interrogation;
+				isSeeing = !isSeeing;
+				expressionCounter = 0;
+			}
 			if (decision == 1) {
 				Walk (1);
 			}
@@ -65,11 +77,24 @@ public class SwordJanissary : MonoBehaviour {
 
 		}
 
+		if (expressionCounter <= 50) {
+			if (expressionCounter == 50) {
+				expression.sprite = null;
+			}
+			expressionCounter += 1;
+		}
 	}
 
 	bool Found() {
 		saw = Physics2D.Raycast (new Vector2 (transform.position.x, transform.position.y-0.1f), Vector2.right * facingDirection, 1.5f, enemies);
 		if (saw.transform == target) {
+			if (!isSeeing) {
+				
+				
+				expression.sprite = exclamation;
+				isSeeing = !isSeeing;
+				expressionCounter = 0;
+			}
 			timeAfterIsaw = 0;
 			return true;
 		}

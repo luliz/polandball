@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8da5573d6dfad774482298f4111046cd
-timeCreated: 1439314870
+timeCreated: 1439334067
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,8 @@ TextureImporter:
     21300006: Janissary_3
     21300008: Janissary_4
     21300010: Janissary_5
+    21300012: Janissary_6
+    21300014: Janissary_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -68,8 +70,8 @@ TextureImporter:
     - name: Janissary_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 50
+        x: 34
+        y: 63
         width: 39
         height: 7
       alignment: 0
@@ -112,6 +114,26 @@ TextureImporter:
         y: 5
         width: 25
         height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Janissary_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 40
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Janissary_7
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 37
+        width: 11
+        height: 19
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
