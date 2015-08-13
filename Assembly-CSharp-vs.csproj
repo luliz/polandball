@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4A905ACF-DF2D-24B2-6D86-71211E281384}</ProjectGuid>
+	<ProjectGuid>{EE3D9571-59BF-EC00-E831-53505B158D8A}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CameraFollowing.cs" />
      <Compile Include="Assets\Scripts\Controls.cs" />
      <Compile Include="Assets\Scripts\SwordJanissary.cs" />
+     <Compile Include="Assets\Scripts\SwordLouco.cs" />
      <Compile Include="Assets\Scripts\TorchAnim.cs" />
      <Compile Include="Assets\Scripts\checkCeiling.cs" />
      <Compile Include="Assets\Scripts\checkGround.cs" />
