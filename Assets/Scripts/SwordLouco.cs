@@ -10,6 +10,7 @@ public class SwordLouco : MonoBehaviour {
 	
 	bool attacking;
 	bool coolingOff;
+	public bool atack;
 	public float turnSpeed;
 	private RaycastHit2D saw;
 	public LayerMask enemies;
@@ -22,24 +23,23 @@ public class SwordLouco : MonoBehaviour {
 	private int cont = 0;
 	public bool coolingoff = false;
 	public float x = 0;
+	private float y = 0;
 	// Use this for initialization
 	void Awake () {
-		sword = transform.Find ("Sword");
 		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (previousPosition);
 		if (attacking) {
-			if (sword.rotation.eulerAngles.z <= 270 && sword.rotation.eulerAngles.z != 0) {
-				sword.Rotate(new Vector3 (0, 0, -sword.rotation.eulerAngles.z));
-				coolingoff = true;
-				counter = 0;
-				decision = 3;
-			} else {
-				sword.Rotate (new Vector3 (0, 0, Time.deltaTime * -turnSpeed));
+			y += 1;
+			if(y <= 1){
+			Debug.Log ("Ouve um atack"); //Visto que a gente vai usar animaçao eu decidi tirar o atack de lulinha que tava dando muito trabalho
+			coolingoff = true;
+			counter = 0;
+			decision = 3;
 			}
+
 		}
 		else if ((Found () || timeAfterIsaw < 300) && !coolingOff) {
 			timeAfterIsaw += 1;
@@ -74,6 +74,7 @@ public class SwordLouco : MonoBehaviour {
 				attacking = false;
 				cont = 0;
 				x = 0;
+				y = 0;
 				previousPosition = target.position;
 			}
 		} 

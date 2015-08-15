@@ -31,7 +31,6 @@ public class SwordJanissary : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (sword.rotation.eulerAngles.z);
 		if (attacking) {
 			
 			if (sword.rotation.eulerAngles.z <= 270 && sword.rotation.eulerAngles.z != 0) {

@@ -40,7 +40,6 @@ public class WeaponJanissary : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (weapon.rotation.eulerAngles.z);
 		if (attacking) {
 			
 			if (weapon.rotation.eulerAngles.z <= 270 && weapon.rotation.eulerAngles.z != 0) {
