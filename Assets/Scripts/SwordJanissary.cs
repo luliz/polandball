@@ -36,6 +36,9 @@ public class SwordJanissary : MonoBehaviour {
 
 	private Animator thisAnimator;
 	private Collider2D thisCollider;
+	private SpriteRenderer expression;
+	public Sprite exclamation;
+	public Sprite interrogation;
 
 //  INICIALIZACAO DAS DEMAIS VARIAVEIS
 
@@ -48,11 +51,13 @@ public class SwordJanissary : MonoBehaviour {
 	public LayerMask barreiras;
 	private int decision;
 	private float counter;
+	private float spriteCounter;
 
 	void Awake () {
 
 		thisAnimator = GetComponent<Animator> ();
-		thisCollider = GetComponent<CircleCollider2D> ();
+		thisCollider = GetComponentInChildren<BoxCollider2D> ();
+		expression = GameObject.Find ("Expressions").GetComponent<SpriteRenderer> ();
 	}
 
 	void Update () {
@@ -68,6 +73,14 @@ public class SwordJanissary : MonoBehaviour {
 
 		timeAfterIsaw += Time.deltaTime;
 		Flip ();
+
+		if (expression.sprite != null) {
+			spriteCounter += Time.deltaTime;
+			if (spriteCounter > 0.7) {
+				spriteCounter = 0;
+				expression.sprite = null;
+			}
+		}
 	}
 
 	void Search () {
@@ -93,10 +106,12 @@ public class SwordJanissary : MonoBehaviour {
 	}
 
 	void Follow () {
-		if (timeAfterIsaw > 2)
+		if (timeAfterIsaw > 3.5) {
 			estado = 0;
+			expression.sprite = interrogation;
+		}
 
-		if (Mathf.Abs (target.position.x - transform.position.x) > 0.3) {
+		if (Mathf.Abs (target.position.x - transform.position.x) > 0.2) {
 
 			if (transform.position.x > target.position.x) {
 				Walk ();
@@ -105,7 +120,8 @@ public class SwordJanissary : MonoBehaviour {
 			}
 		} else {
 
-			estado = 2;
+			if (Mathf.Abs (target.position.y - transform.position.y) < 0.5)
+				estado = 2;
 		}
 
 		if (transform.position.x > target.position.x) {
@@ -129,6 +145,8 @@ public class SwordJanissary : MonoBehaviour {
 		saw = Physics2D.Raycast (new Vector2 (transform.position.x, transform.position.y-0.1f), Vector2.right * facingDirection, 1.5f, visaoJanissary);
 		if (saw.transform == target) {
 			timeAfterIsaw = 0;
+			if (estado == 0)
+				expression.sprite = exclamation;
 			return true;
 		}
 		return false;
@@ -156,5 +174,8 @@ public class SwordJanissary : MonoBehaviour {
 
 		Vector3 theScale = new Vector3 (facingDirection, 1, 1);
 		transform.localScale = theScale;
+
+		theScale = new Vector3 (1, 1, 1);
+		expression.transform.localScale = theScale;
 	}
 }

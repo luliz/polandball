@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SwordJanissary.cs">
     <Files>
-      <File FileName="Assets\Scripts\SwordJanissary.cs" Line="85" Column="28" />
+      <File FileName="Assets\Scripts\SwordJanissary.cs" Line="63" Column="18" />
       <File FileName="Assets\AttackLouco.cs" Line="17" Column="12" />
-      <File FileName="Assets\Scripts\SwordLouco.cs" Line="50" Column="4" />
+      <File FileName="Assets\Scripts\SwordLouco.cs" Line="57" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
