@@ -34,7 +34,8 @@ public class SwordJanissary : MonoBehaviour {
 
 //	VARIAVEIS QUE FAZEM REFERENCIA A COMPONENTES
 
-	private Animator animator;
+	private Animator thisAnimator;
+	private Collider2D thisCollider;
 
 //  INICIALIZACAO DAS DEMAIS VARIAVEIS
 
@@ -44,16 +45,17 @@ public class SwordJanissary : MonoBehaviour {
 	private int facingDirection = 1;//1=direita, -1=esquerda
 	public LayerMask visaoJanissary;//Layer mask q armazena quais objetos podem ser 'vistos' pelo janissary. (serve principalmente para impedir q sua visao pare em si mesmo (em seu proprio collider)
 	public float speed;
+	public LayerMask barreiras;
 	private int decision;
 	private float counter;
 
 	void Awake () {
 
-		animator = GetComponent<Animator> ();
+		thisAnimator = GetComponent<Animator> ();
+		thisCollider = GetComponent<CircleCollider2D> ();
 	}
 
 	void Update () {
-		print (estado);
 		if (Found ())
 			estado = 1;
 
@@ -79,7 +81,7 @@ public class SwordJanissary : MonoBehaviour {
 			Walk ();
 		}
 		else {
-			animator.SetBool("walking", false);
+			thisAnimator.SetBool("walking", false);
 		}
 		
 		counter += Time.deltaTime;
@@ -94,7 +96,7 @@ public class SwordJanissary : MonoBehaviour {
 		if (timeAfterIsaw > 2)
 			estado = 0;
 
-		if (Mathf.Abs (target.position.x - transform.position.x) > 0.2) {
+		if (Mathf.Abs (target.position.x - transform.position.x) > 0.3) {
 
 			if (transform.position.x > target.position.x) {
 				Walk ();
@@ -116,7 +118,7 @@ public class SwordJanissary : MonoBehaviour {
 
 	void Attack () {
 
-		animator.SetBool ("walking", false);
+		thisAnimator.SetBool("walking", false);
 		//TODO depois da animacao feita fazer o script de ataque
 		//por enquanto ele simplesmente retorna ao estado 1
 		estado = 1;
@@ -134,8 +136,12 @@ public class SwordJanissary : MonoBehaviour {
 
 	void Walk () {
 
-		animator.SetBool ("walking", true);
-		transform.Translate (new Vector2 (speed * facingDirection * Time.deltaTime, 0));
+		if (thisCollider.IsTouchingLayers (barreiras))
+			thisAnimator.SetBool ("walking", false);
+		else {
+			thisAnimator.SetBool ("walking", true);
+			transform.Translate (new Vector2 (speed * facingDirection * Time.deltaTime, 0));
+		}
 	}
 
 
