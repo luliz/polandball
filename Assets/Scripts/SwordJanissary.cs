@@ -171,11 +171,8 @@ public class SwordJanissary : MonoBehaviour {
 //talvez eu mesmo faça isso dps
 
 	void Flip () {
+		transform.localScale = new Vector3 (facingDirection, 1, 1);
+		expression.transform.localScale = new Vector3 (facingDirection, 1, 1);
 
-		Vector3 theScale = new Vector3 (facingDirection, 1, 1);
-		transform.localScale = theScale;
-
-		theScale = new Vector3 (1, 1, 1);
-		expression.transform.localScale = theScale;
 	}
 }
