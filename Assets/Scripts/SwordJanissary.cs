@@ -104,6 +104,14 @@ public class SwordJanissary : MonoBehaviour {
 
 		if (Mathf.Abs (target.position.x - transform.position.x) < 0.3) {
 			if (Mathf.Abs (target.position.y - transform.position.y) < 0.3) {
+				if (transform.position.x > target.position.x && facingDirection != -1) {
+					Flip();
+					facingDirection = -1;
+				}
+				else if (transform.position.x < target.position.x && facingDirection != 1) {
+					Flip();
+					facingDirection = 1;
+				}
 				attacking = true;
 				animator.SetBool("walking", false);
 			}
